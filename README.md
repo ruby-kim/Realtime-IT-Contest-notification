@@ -10,11 +10,7 @@ IT 공모전 실시간 알림 repository
 * 씽유: https://thinkyou.co.kr/
 * 씽굿: https://www.thinkcontest.com/
 * 위비티: https://www.wevity.com/
-* 캠퍼스 정글: https://www.facebook.com/junglecampus/
 * 스펙업: https://cafe.naver.com/specup
-* 한국발명진흥회(외국 공모전 추천): https://www.kipa.org/kipa/sample/
 * 캠퍼스몬: https://campusmon.jobkorea.co.kr/
 * 디자인정글: https://www.jungle.co.kr/
 * 인크루트 공모전: http://gongmo.incruit.com/
-* 스펙북: http://www.specbook.kr/
-* 아이러브콘테스트: http://www.ilovecontest.com/munhak/bbs/mainindex.php
