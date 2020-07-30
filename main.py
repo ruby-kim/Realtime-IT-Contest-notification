@@ -12,5 +12,5 @@ if __name__ == "__main__":
     jungle.crawling()
 
     """ print result """
-    # detizen.check_result()
+    detizen.check_result()
     jungle.check_result()
