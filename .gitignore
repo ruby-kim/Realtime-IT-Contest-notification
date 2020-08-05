@@ -2,8 +2,5 @@ __pycache__
 venv
 .idea
 .DS_Store
-<<<<<<< HEAD
-=======
-.lib
->>>>>>> bbdc948b4ce85a7088dca2c75358df5d3afc132c
 .venv
+.vscode
