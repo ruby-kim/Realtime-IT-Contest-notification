@@ -14,3 +14,7 @@ if __name__ == "__main__":
     """ print result """
     detizen.check_result()
     jungle.check_result()
+
+    """ check dir name """
+    detizen.check_dirname()
+    jungle.check_dirname()

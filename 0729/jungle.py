@@ -23,3 +23,8 @@ class Jungle:
     def check_result(self):
         for key, value in self.titles.items():
             print(key, value)
+        print()
+
+    def check_dirname(self):
+        print(self.BASE_DIR)
+        print()
