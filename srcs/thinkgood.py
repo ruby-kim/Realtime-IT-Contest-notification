@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-# import re
 
 
 class Thinkgood:
@@ -14,11 +13,14 @@ class Thinkgood:
             self.nbrPage, self.category, self.contestStatus)
         self.req = requests.get(self.rootpath + self.pagepath)
         self.soup = BeautifulSoup(self.req.content, 'html.parser')
+        self.catelist = self.soup.find(
+            attrs={"class": "cate-list"}).find_all('a')
         self.data = self.soup.find(
-            attrs={"class": "contest-table"}).find_all('a')
+            attrs={"class": "contest-table"}).find('tbody').find_all('tr')
 
     def crawling(self, status='ing'):
         nextPage = self.nbrPage
+        gongmoInfo = []
         print("======== Start Crawling ========\n")
         while True:
             self.reget(status, nextPage)
@@ -27,7 +29,12 @@ class Thinkgood:
                 break
             print("======== page {} ========".format(nextPage))
             for i in self.data:
-                self.titles[i.contents[0]] = self.rootpath + i.get('href')
+                during = i.find_all('td')[3]
+                gongmoInfo = [during.contents[0] + " ~ " + during.contents[-1],
+                            self.catelist[self.category - 1].contents[0],
+                            i.find_all('td')[1].contents[0],
+                            self.rootpath + i.find('a').get('href')]
+                self.titles[i.find('a').contents[0]] = gongmoInfo
             nextPage += 1
 
     def check_result(self):
@@ -44,4 +51,4 @@ class Thinkgood:
             self.req = requests.get(self.rootpath + self.pagepath)
             self.soup = BeautifulSoup(self.req.content, 'html.parser')
             self.data = self.soup.find(
-                attrs={"class": "contest-table"}).find_all('a')
+                attrs={"class": "contest-table"}).find('tbody').find_all('tr')
