@@ -12,16 +12,16 @@ class Detizen:
         self.data = self.soup.select(
             '#Body > #Wrapper > #Contents > #Main > section > div > ul > li > div > h4 > a'
         )
-        self.titles = dict()
+        self.contests = dict()
 
     def crawling(self):
         print("===== [Detizen] Start  Crawling data... =====")
         for i in range(0, len(self.data), 2):
-            self.titles[self.data[i].get_text()] = 'http://www.detizen.com/contest/' + self.data[i].get('href')
+            self.contests[self.data[i].get_text()] = 'http://www.detizen.com/contest/' + self.data[i].get('href')
         print("===== [Detizen] Finish Crawling data... =====\n")
 
     def check_result(self):
-        for key, value in self.titles.items():
+        for key, value in self.contests.items():
             print(key, value)
         print()
 

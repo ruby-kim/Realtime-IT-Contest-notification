@@ -12,16 +12,16 @@ class Jungle:
         self.data = self.soup.select(
             'div > div > ul#contest-list.thumb_list05 > li > div > a.thumb_title05'
         )
-        self.titles = dict()
+        self.contests = dict()
 
     def crawling(self):
         print("===== [Jungle] Start  Crawling data... =====")
         for text in self.data:
-            self.titles[text.get_text()] = 'https://www.jungle.co.kr' + text.get('href')
+            self.contests[text.get_text()] = 'https://www.jungle.co.kr' + text.get('href')
         print("===== [Jungle] Finish Crawling data... =====\n")
 
     def check_result(self):
-        for key, value in self.titles.items():
+        for key, value in self.contests.items():
             print(key, value)
         print()
 
