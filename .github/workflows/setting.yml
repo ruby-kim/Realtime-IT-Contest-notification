@@ -2,7 +2,7 @@ name: Auto crawl & issue management action
 
 on:
   schedule:
-    - cron: '0 21 3 * *'
+    - cron: '0 21 */3 * *'
 
 jobs:
   build:
