@@ -1,0 +1,32 @@
+name: Auto crawl & issue management action
+
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: '0 21 3 * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: [Step 1] crawling
+      run: |
+        python crawling.py
+    - name: [Step 2] preprocessing
+      run: |
+        python preprocessing.py
+    - name: [Step 3] setting github
+      env:
+        MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      run: |
+        python setting_github.py
