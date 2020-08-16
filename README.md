@@ -9,40 +9,17 @@ IT 공모전 실시간 알림 repository.<br>
 |   └-- workflows
 |       └-- setting.yml
 |-- .gitignore
-|-- 0729
-|   |-- detizen.py
-|   |-- jungle.py
-|   └-- main.py
-|-- 0731
-|   |-- incruit.py
-|   |-- main.py
-|   |-- thinkgood.py
-|   └-- wevity.py
-|-- 0805
-|   |-- incruit.py
-|   |-- main.py
-|   └-- thinkgood.py
-|-- 0809
-|   |-- github_utils.py
-|   |-- incruit.json
-|   |-- incruit.py
-|   |-- kmp.py
-|   |-- main.py
-|   |-- thinkgood.json
-|   └-- thinkgood.py
-|-- 0812
-|   |-- close.json
-|   |-- crawling.py
-|   |-- incruit.json
-|   |-- incruit.py
-|   |-- open.json
-|   |-- preprocessing.py
-|   |-- setting_github.py
-|   |-- thinkgood.json
-|   |-- thinkgood.py
-|   └-- utils.py
 |-- README.md
-└-- requirements.txt
+|-- close.json
+|-- crawling.py
+|-- incruit.json
+|-- incruit.py
+|-- open.json
+|-- preprocessing.py
+|-- requirements.txt
+|-- setting_github.py
+|-- thinkgood.json
+└-- thinkgood.py
 ```
 
 ### Dev Environment
