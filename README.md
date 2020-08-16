@@ -23,7 +23,7 @@ IT 공모전 실시간 알림 repository.<br>
 * 인크루트 공모전: http://gongmo.incruit.com/
 
 ### Developers
-* [@Jinho Kim]()
+* [@Jinho Kim](https://github.com/kimjinho1)
 * [@kimkyeongnam](https://github.com/kimkyeongnam)
 * [@moonhyeok song]()
 * [@xifoxy]()
