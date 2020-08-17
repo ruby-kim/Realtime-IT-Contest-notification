@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import os
 import json
-from tqdm import tqdm
 
 class Thinkgood:
     def __init__(self):
@@ -18,7 +17,7 @@ class Thinkgood:
         """ 카테고리별 공모전 리스트 크롤링 """
         print("===== [Thinkgood]  Start Crawling data... =====")
         for category in self.categories:
-            for state in tqdm(self.categories_state):
+            for state in self.categories_state:
                 page = 1
                 while 42:
                     req = requests.get(self.base_url + category + state + '&page=' + str(page))

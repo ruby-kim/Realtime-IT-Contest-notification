@@ -24,7 +24,7 @@ class KMP:
         self.ret = list()
 
     def check(self):
-        for elem1 in self.thinkgood.keys():
+        for elem1 in list(self.thinkgood.keys()):
             for elem2 in self.incruit.keys():
                 self.kmp(elem1, elem2) if len(elem1) > len(elem2) else self.kmp(elem2, elem1)
                 if not self.ret:
@@ -50,3 +50,4 @@ class KMP:
                 else:
                     begin += matched - pi[matched - 1]
                     matched = pi[matched - 1]
+                    
