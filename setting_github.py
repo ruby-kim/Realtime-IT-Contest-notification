@@ -2,6 +2,8 @@
 
 import os
 from github import Github
+from pytz import timezone
+from datetime import datetime
 
 from utils import save, load
 
@@ -23,10 +25,14 @@ def upload_github_issue(repo, open):
 
 def close_github_issue(repo, close):
     open_issues = repo.get_issues(state='open')
+    KST = str(datetime.now(timezone('Asia/Seoul')))[:10]
     need_to_close = list(close.keys())
     for issue in open_issues:
         if issue.title in need_to_close:
             issue.edit(state='closed')
+        if issue.body[18:29] < KST:
+            issue.edit(state='closed')
+
 
 
 if __name__ == "__main__":
