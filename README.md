@@ -15,7 +15,8 @@ IT 공모전 실시간 알림 repository.<br>
 ├─ preprocessing.py
 ├─ requirements.txt
 ├─ setting_github.py
-└─ thinkgood.py
+├─ thinkgood.py
+└─ utils.py
 ```
 
 ### Contest Site
@@ -28,5 +29,3 @@ IT 공모전 실시간 알림 repository.<br>
 * [@moonhyeok song](https://github.com/mike2ox)
 * [@xifoxy]()
 
-### FAQ
-해당 repository에 대한 문의는 issue를 이용해주시길 바랍니다.
