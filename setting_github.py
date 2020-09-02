@@ -30,7 +30,7 @@ def close_github_issue(repo, close):
     for issue in open_issues:
         if issue.title in need_to_close:
             issue.edit(state='closed')
-        if issue.body[18:29] < KST:
+        if issue.body[19:29] < KST:
             issue.edit(state='closed')
 
 
