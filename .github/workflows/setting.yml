@@ -1,8 +1,6 @@
 name: Auto crawl & issue management action
 
 on:
-  push:
-    branches: [ master ]
   schedule:
     - cron: '0 21 */3 * *'
 
