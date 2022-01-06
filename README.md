@@ -25,7 +25,7 @@ IT 공모전 실시간 알림 repository.<br>
 
 ### Developers
 * [@Jinho Kim](https://github.com/kimjinho1)
-* [@kimkyeongnam](https://github.com/kimkyeongnam)
+* [@Ruby Kim](https://github.com/ruby-kim)
 * [@moonhyeok song](https://github.com/mike2ox)
 * [@xifoxy]()
 
